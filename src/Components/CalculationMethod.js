@@ -6,8 +6,8 @@ class CalculationMethod extends Component {
 		return(
 			<div>
 				<select id="method" name="method" onChange= { this.props.onChangeValue}>
-					<option value="metric">Metric</option>
-					<option value="imperial">Imperial</option>
+					<option value="metric">metric</option>
+					<option value="imperial">imperial</option>
 				</select>
 			</div>
 		)

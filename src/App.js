@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import DisplayResult from './Components/displayResult';
-import CalculationMethod from './CalculationMethod.js';
+import CalculationMethod from './Components/CalculationMethod.js/index.js';
 
 class App extends Component {
   constructor(props) {
@@ -8,41 +8,45 @@ class App extends Component {
     this.state = {
       weight: '',
       height: '',
-      methodType: 'Metric'
+      method: 'metric'
     }
   }
 
-  // calculateMethod () {
-  //   if (this.state.methodType === 'Metric') {
-  //     this.setState({methodType: 'Metric'});
-  //   } else {
-  //     this.setState({ methodType: 'Imperial'})
-  //   }
-  // }
+  setInputType(e) {
+    this.setState({ method: e.target.value }, () => {
+      if (this.state.method === 'imperial') {
+        this.setState({ weightType: 'lbs', heightType: 'inches' });
+      } else if (this.state.method === 'metric') {
+        this.setState({ weightType: 'kg', heightType: 'cm' });
+      }
+    })
+  }
 
   render() {
     return (
       <div className="input-div">
-        <h1>REACT BMI-calculator</h1>
-         <CalculationMethod
-         />
-        <div className="input-field">
-          <label>Weight(kg)</label>
-          <input name="weight" value={this.state.weight} onChange={(e) => this.setState({ weight: e.target.value })} />
-        </div>
-
-        <div className="input-field">
-          <label>Height(cm)</label>
-          <input name="height" value={this.state.height} onChange={(e) => this.setState({ height: e.target.value })} />
-        </div>
-
-        <DisplayResult
-          weight={this.state.weight}
-          height={this.state.height}
-        />
+      <h1>REACT BMI-calculator</h1>
+      <CalculationMethod
+      onChangeValue={this.setInputType.bind(this)}
+      />
+      <div className="input-field">
+      <label>Weight(kg)</label>
+      <input name="weight" value={this.state.weight} onChange={(e) => this.setState({ weight: e.target.value })} />
       </div>
-    );
-  }
-}
 
-export default App;
+      <div className="input-field">
+      <label>Height(cm)</label>
+      <input name="height" value={this.state.height} onChange={(e) => this.setState({ height: e.target.value })} />
+      </div>
+
+      <DisplayResult
+      method = {this.state.method}
+      weight={this.state.weight}
+      height={this.state.height}
+      />
+      </div>
+      );
+    }
+  }
+
+  export default App;
