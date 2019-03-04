@@ -3,8 +3,8 @@ import { mount, shallow } from 'enzyme';
 import { stub } from 'sinon';
 
 import DisplayResult from '../Components/displayResult'
-import CalculationMethod from '../Components/CalculationMethod';
 import App from '../App';
+import CalculationMethod from '../Components/CalculationMethod'
 
 describe('<App />', () => {
   it('renders header', () => {
@@ -53,7 +53,7 @@ describe('<DisplayResult />', () => {
 
 describe('<CalculationMethod />', () => {
   it('has two methods to choose from', () => {
-    const component = mount(<MethodSelect />);
+    const component = mount(<CalculationMethod />);
     const selector = component.find('#method').instance()
     expect(selector.options.length).toEqual(2)
   }

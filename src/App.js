@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import DisplayResult from './Components/displayResult';
-import CalculationMethod from './Components/CalculationMethod.js/index.js';
+import CalculationMethod from './Components/CalculationMethod';
 
 class App extends Component {
   constructor(props) {
@@ -8,7 +8,9 @@ class App extends Component {
     this.state = {
       weight: '',
       height: '',
-      method: 'metric'
+      method: 'metric',
+      weightType: 'kg',
+      heightType: 'cm'
     }
   }
 
@@ -30,12 +32,12 @@ class App extends Component {
       onChangeValue={this.setInputType.bind(this)}
       />
       <div className="input-field">
-      <label>Weight(kg)</label>
+      <label>Weight({this.state.weightType})</label>
       <input name="weight" value={this.state.weight} onChange={(e) => this.setState({ weight: e.target.value })} />
       </div>
 
       <div className="input-field">
-      <label>Height(cm)</label>
+      <label>Height({this.state.heightType})</label>
       <input name="height" value={this.state.height} onChange={(e) => this.setState({ height: e.target.value })} />
       </div>
 
