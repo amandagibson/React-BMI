@@ -14,13 +14,14 @@ class App extends Component {
   
   render() {
     return (
-      <div>
-        <div>
+      <div className="input-div">
+        <h1>REACT BMI-calculator</h1>
+        <div className="input-field">
           <label>Weight(kg)</label>
           <input name="weight" value={this.state.weight} onChange={(e) => this.setState({ weight: e.target.value })} />
         </div>
-
-        <div>
+        
+        <div className="input-field">
           <label>Height(cm)</label>
           <input name="height" value={this.state.height} onChange={(e) => this.setState({ height: e.target.value })} />
         </div>
