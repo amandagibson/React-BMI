@@ -57,4 +57,4 @@ describe('<CalculationMethod />', () => {
     const selector = component.find('#method').instance()
     expect(selector.options.length).toEqual(2)
   }
-)})
+  )})

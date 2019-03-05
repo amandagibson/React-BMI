@@ -5,13 +5,13 @@ class CalculationMethod extends Component {
 
 		return(
 			<div>
-				<select id="method" name="method" onChange= { this.props.onChangeValue}>
-					<option value="metric">metric</option>
-					<option value="imperial">imperial</option>
-				</select>
+			<select id="method" name="method" onChange= { this.props.onChangeValue}>
+			<option value="metric">metric</option>
+			<option value="imperial">imperial</option>
+			</select>
 			</div>
-		)
+			)
+		}
 	}
-}
 
 	export default CalculationMethod

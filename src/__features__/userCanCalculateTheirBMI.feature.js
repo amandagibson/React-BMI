@@ -5,7 +5,6 @@ describe('BMI Converter', () => {
     })
 
     beforeEach(async () => {
-        // Reload the application between tests to reset state
         await page.reload();
     });
 
@@ -31,7 +30,6 @@ describe('BMI Converter', () => {
 
     describe('Imperial method', async () => {
         beforeEach( async () => {
-            // This before block will be executed prior to each test in this describe block
             await page.select('select[id="method"]', 'imperial')
             await page.type('input[name="weight"]', '200')
             await page.type('input[name="height"]', '73')
