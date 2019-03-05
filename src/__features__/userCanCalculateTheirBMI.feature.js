@@ -1,8 +1,8 @@
 describe('BMI Converter', () => {
     beforeAll(async () => {
-        // visit the application running on the Jest Development Server
+        jest.setTimeout(100000);
         await page.goto('http://localhost:3000');
-    });
+    })
 
     beforeEach(async () => {
         // Reload the application between tests to reset state
