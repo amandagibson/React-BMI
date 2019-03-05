@@ -27,7 +27,6 @@ class App extends Component {
 	render() {
 		return (
 			<div className="input-div">
-			<h1>REACT BMI-calculator</h1>
 			<CalculationMethod
 			onChangeValue={this.setInputType.bind(this)}
 			/>

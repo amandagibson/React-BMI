@@ -8,8 +8,8 @@ describe('BMI Converter', () => {
         await page.reload();
     });
 
-    it('should display "REACT BMI-calculator"', async () => {
-        await expect(page).toMatch('REACT BMI-calculator');
+    it('should display "The React"', async () => {
+        await expect(page).toMatch('The React');
     });
 
     describe('Metric method', async () => {

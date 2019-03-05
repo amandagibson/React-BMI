@@ -7,11 +7,6 @@ import App from '../App';
 import CalculationMethod from '../Components/CalculationMethod'
 
 describe('<App />', () => {
-  it('renders header', () => {
-    const component = shallow(<App />);
-    const header = <h1>REACT BMI-calculator</h1>;
-    expect(component.contains(header)).toEqual(true);
-  });
 
   it('shows metric as the standard method', () => {
     const component = shallow(<App />);
