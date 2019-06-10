@@ -1,3 +1,11 @@
+# React BMI Calculator
+
+Deployed with Netlify at https://amandaandviktorsbmicalculator.netlify.com/
+
+Built by [Amanda Gibson](https://github.com/amandagibson) and [Viktor Olsson](https://github.com/vick3d) using ReactJS
+
+-------
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
