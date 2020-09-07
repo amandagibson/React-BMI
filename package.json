@@ -27,7 +27,7 @@
     "enzyme-adapter-react-16": "^1.10.0",
     "jest-dev-server": "^3.9.0",
     "jest-puppeteer": "^3.9.0",
-    "puppeteer": "^1.12.2",
+    "puppeteer": "^1.13.0",
     "react-scripts": "^2.1.5",
     "react-test-renderer": "^16.8.3",
     "sinon": "^7.2.7"
